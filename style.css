@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+
+
+    /* main background */
+    --verydarkblue: hsl(233, 47%, 7%);
+
+    /* card background */
+    --darkblue: hsl(244, 38%, 16%);
+
+    /* accent */
+    --softviolet: hsl(277, 64%, 61%);
+
+
+    /* main heading /stats */
+    --white: hsl(0, 0%, 100%);
+
+    /* main paragraph */
+    --transparentwhitemain: hsla(0, 0%, 100%, 0.75);
+
+    /* main stats */
+    --transparentwhitestat: hsla(0, 0%, 100%, 0.6);
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter";
+    color:var(--transparentwhitemain);
+    background-color: var(--verydarkblue);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.container{
+    background-color: var(--darkblue);
+    border-radius: 10px;
+    display:flex;
+    width: 80vw;
+    
+}
+
+.hero{
+    background: URL('images/image-header-mobile.jpg');
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 278px){
+    .container{
+        flex-direction: column;
+        height: auto;    
+        justify-content: space-between;
+        margin: 2em;
+    }
+
+
+    .hero{
+        background-size: cover;
+        height: 150px;
+        width: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    h1{
+        font-size: 7vw;
+        text-align: center;
+    }
+
+    main > p {
+        font-size: .7em;
+        text-align: center;
+    }
+
+    main{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 18px;
+        padding-right: 18px;
+        height: auto;
+    }
+
+    .stats>section{
+        align-items: center;
+        justify-content: center;
+    }
+    .stats>section>h2{
+        justify-content: center;
+    }
+    .stats>section>h3{
+        font-size: .6em;
+    }
+}
+
+@media screen and (min-width: 800px){
+
+
+
+    .container{
+        height: 44.5vh;
+        flex-direction: row-reverse;
+    }
+
+    .hero{
+        background-size: cover;
+        height: auto;
+        width: 100%;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .stats{
+        display:flex;
+        flex-direction: row;
+        gap: 2.5em;
+    }
+
+    h1{
+        padding-left: 10%;
+        padding-right: 15%;
+        
+        margin:0;
+        font-size: 2.5em;
+        text-align: start;
+        
+    }
+
+    main > p {
+        font-size: 1em;
+        
+        padding-left: 10%;
+        text-align: start;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 3em;
+        
+        width: 100%;
+        height: auto;
+        padding:0;
+        
+
+    }
+
+    .stats{
+        padding-left: 10%;
+        
+    }
+
+    .stats>section{
+        display:flex;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .stats>section>h2{
+        font-size: 1.2em;
+    }
+    .stats>section>h3{
+        font-size: .8em;
+    }
+
+}
+
+
+
+
+
+
+h1{
+    font-weight: 700;
+    line-height: 1;
+    text-wrap: wrap;
+    color: var(--white);
+
+}
+
+main > p {
+    display: flex;
+    font-weight: 400;
+    text-wrap: wrap;
+    line-height: 2;
+
+}
+
+.stats > section{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display:flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+h2{
+    margin:0;
+    line-height: 1;
+    font-size: 1em;
+
+    color: var(--white);
+}
+
+.stats>section>h3{
+    font-family: "Lexend Deca";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin:0;
+    line-height: 1;
+    font-weight: 400;
+    color:var(--transparentwhitestat);
+}
+
+.accent{
+    color:var(--softviolet);
+}
+
+.stats>section:last-child{
+    text-transform: uppercase;
+}
+
+
+.attribution {
+    display: inline-flex;
+    justify-content: center;
+    position:fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+    flex-wrap: wrap;
+    align-self: end;
+    font-size: 11px;
+    text-wrap: balance;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
